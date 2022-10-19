@@ -30,7 +30,7 @@ app.post("/", function (req, res) {
             }
         ]
     }
-//     Code changed for security reasons
+//     Code changed for security reasons update url as per your credentials
     const JsonData = JSON.stringify(data)
     const url = "https://us2.api.mailchimp.com/3.0/Lists/22c6e3dcef";
     const options = {
