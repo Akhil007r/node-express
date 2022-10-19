@@ -32,10 +32,10 @@ app.post("/", function (req, res) {
     }
 //     Code changed for security reasons update url as per your credentials 1
     const JsonData = JSON.stringify(data)
-    const url = "https://us2.api.mailchimp.com/3.0/Lists/22c6e3dcef";
+    const url = "https://us2.api.mailchimp.com/3.0/Lists/" Add your own unique acc Id"";
     const options = {
         method: "POST",
-        auth: "Akhil:13b47b92cdc5f809c8d58e7446b8b6a9-us2"
+        auth: "Add your Api"
     }
     const request = https.request(url, options, function (response) {
         if (response.statusCode === 200) {
@@ -59,7 +59,7 @@ app.listen(process.env.PORT || 3000, function () {
 })
 
 // Api Key
-// 13b47b92cdc5f809c8d58e7446b8b6a9-us21
+//
 
 // List Id
-// 22c6e3dcef
+// 
