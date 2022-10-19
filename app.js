@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
     const url = "https://us2.api.mailchimp.com/3.0/Lists/" Add your own unique acc Id"";
     const options = {
         method: "POST",
-        auth: "Add your Api"
+        auth: "NAME : Add your Api"
     }
     const request = https.request(url, options, function (response) {
         if (response.statusCode === 200) {
