@@ -4,10 +4,8 @@ const express = require("express");
 const request = require("request");
 const https = require("https")
 const app = express();
-
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static("public"))
-
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/signup.html")
 })
@@ -26,16 +24,15 @@ app.post("/", function (req, res) {
                     FNAME: fname,
                     LNAME: lname
                 }
-
             }
         ]
     }
-//     Code changed for security reasons update url as per your credentials 1
     const JsonData = JSON.stringify(data)
-    const url = "https://us2.api.mailchimp.com/3.0/Lists/" Add your own unique acc Id"";
+    const url = "https://us21.api.mailchimp.com/3.0/Lists/22c6e3dcef";
     const options = {
         method: "POST",
-        auth: "NAME : Add your Api"
+        auth: "Akhil:a13b47b92cdc5f809c8d58e7446b8b6a9-us21"
+        auth: "Akhil:13b47b92cdc5f809c8d58e7446b8b6a9-us21"
     }
     const request = https.request(url, options, function (response) {
         if (response.statusCode === 200) {
@@ -57,9 +54,3 @@ app.post("/failure", function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
     console.log("Server port 3000")
 })
-
-// Api Key
-//
-
-// List Id
-// 
